@@ -1,2 +1,2 @@
 # FEAudioDisplayView
-一个用语显示语音的视图
+一个用于显示语音的视图
