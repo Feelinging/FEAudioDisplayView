@@ -16,6 +16,14 @@
 
 @implementation FEAudioWaveView
 
+- (instancetype)init {
+    if (self = [super init]) {
+        // 设置背景色，防止为nil是调用drawRect之后出现奇怪现象
+        self.backgroundColor = [UIColor whiteColor];
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
     
