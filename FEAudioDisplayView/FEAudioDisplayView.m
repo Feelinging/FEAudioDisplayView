@@ -91,11 +91,11 @@
     self.state = FEAudioDisplayViewStateNone;
 }
 
-- (void)setOffsetTimeInterval:(NSTimeInterval)offset power:(CGFloat)power {
+- (void)setOffsetTimeInterval:(NSTimeInterval)offset{
     // update UI
-    self.waveView.power = power;
+    self.offsetTimeInterval = offset;
     
-    self.timeLabel.text = [NSString stringWithFormat:@"%.f",self.totalTimeInterval - offset];
+    [self updateTimeLabelDisplay];
 }
 
 - (void)setPlayImage:(UIImage *)image forState:(FEAudioDisplayViewState)state {
@@ -115,7 +115,9 @@
     _totalTimeInterval = totalTimeInterval;
     _offsetTimeInterval = 0.f;
     
-    [self.timeLabel setNeedsDisplay];
+    // 更新UI
+    self.waveView.power = 0.f;
+    [self updateTimeLabelDisplay];
 }
 
 #pragma mark setter&getter
@@ -206,6 +208,12 @@
     if (self.tapBlock) {
         self.tapBlock(self, self.state);
     }
+}
+
+- (void)updateTimeLabelDisplay {
+    UInt32 min = (UInt32)self.totalTimeInterval / 60;
+    UInt32 second = (UInt32)self.totalTimeInterval % 60;
+    self.timeLabel.text = [NSString stringWithFormat:@"%02i:%02i", min, second];
 }
 
 

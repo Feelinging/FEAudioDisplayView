@@ -48,7 +48,8 @@
 
 - (void)updateWave {
     CGFloat power = arc4random_uniform(10)/10.0;
-    [self.audioView setOffsetTimeInterval:1 power:power];
+    self.audioView.waveView.power = power;
+    [self.audioView setOffsetTimeInterval:1];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -87,10 +87,8 @@ typedef void (^FEAudioDisplayViewTapBlock)(FEAudioDisplayView *, FEAudioDisplayV
 
 /**
  *  设置播放过了的偏移时间
- *
- *  @param offset 偏移时间
  */
-- (void)setOffsetTimeInterval:(NSTimeInterval)offset power:(CGFloat)power;
+- (void)setOffsetTimeInterval:(NSTimeInterval)offset;
 
 /**
  *  设置播放按钮的图片
