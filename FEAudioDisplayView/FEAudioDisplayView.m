@@ -92,9 +92,9 @@
 }
 
 - (void)setOffsetTimeInterval:(NSTimeInterval)offset{
-    // update UI
-    self.offsetTimeInterval = offset;
+    _offsetTimeInterval = offset;
     
+    // update UI
     [self updateTimeLabelDisplay];
 }
 
@@ -111,12 +111,10 @@
     }
 }
 
-- (void)resetWithTotalTimeInterval:(NSTimeInterval)totalTimeInterval {
+- (void)setTotalTimeInterval:(NSTimeInterval)totalTimeInterval {
     _totalTimeInterval = totalTimeInterval;
-    _offsetTimeInterval = 0.f;
     
     // 更新UI
-    self.waveView.power = 0.f;
     [self updateTimeLabelDisplay];
 }
 
