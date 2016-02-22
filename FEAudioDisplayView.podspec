@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "一个简单好用的用于显示弹幕的视图"
 
-  s.homepage     = "https://github.com/Feelinging/FEAudiodispalyView"
+  s.homepage     = "https://github.com/Feelinging/FEAudioDisplayView"
   s.license      = "MIT"
   s.author       = { "Kira Yamato" => "https://github.com/kirayamato1989" }
   s.platform     = :ios, "7.0"
