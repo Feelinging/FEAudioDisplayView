@@ -93,9 +93,6 @@
 
 - (void)setOffsetTimeInterval:(NSTimeInterval)offset{
     _offsetTimeInterval = offset;
-    
-    // update UI
-    [self updateTimeLabelDisplay];
 }
 
 - (void)setPlayImage:(UIImage *)image forState:(FEAudioDisplayViewState)state {
@@ -113,9 +110,6 @@
 
 - (void)setTotalTimeInterval:(NSTimeInterval)totalTimeInterval {
     _totalTimeInterval = totalTimeInterval;
-    
-    // 更新UI
-    [self updateTimeLabelDisplay];
 }
 
 #pragma mark setter&getter
