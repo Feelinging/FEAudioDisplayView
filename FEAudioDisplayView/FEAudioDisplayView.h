@@ -105,4 +105,9 @@ typedef void (^FEAudioDisplayViewTapBlock)(FEAudioDisplayView *, FEAudioDisplayV
  */
 - (void)stop;
 
+/**
+ *  重置播放总时长，默认会把播放偏移时间置0
+ */
+- (void)resetWithTotalTimeInterval:(NSTimeInterval)totalTimeInterval;
+
 @end

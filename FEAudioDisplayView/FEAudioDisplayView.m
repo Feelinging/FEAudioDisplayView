@@ -111,6 +111,13 @@
     }
 }
 
+- (void)resetWithTotalTimeInterval:(NSTimeInterval)totalTimeInterval {
+    _totalTimeInterval = totalTimeInterval;
+    _offsetTimeInterval = 0.f;
+    
+    [self.timeLabel setNeedsDisplay];
+}
+
 #pragma mark setter&getter
 - (void)setState:(FEAudioDisplayViewState)state {
     if (_state != state) {
