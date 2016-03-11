@@ -176,8 +176,9 @@
         CGSize size = self.bounds.size;
         CGFloat boarder = 8.f;
         // 播放按钮
-        CGFloat playY = (size.height - 44)/2.0;
-        self.playButton.frame = CGRectMake(boarder, playY, 44, 44);
+        CGFloat playY = MAX((size.height - 44)/2.0, 3);
+        CGFloat playWH = size.height - 2 * playY;
+        self.playButton.frame = CGRectMake(boarder, playY, playWH, playWH);
         
         // 时间
         CGFloat timeW = 60.f;
