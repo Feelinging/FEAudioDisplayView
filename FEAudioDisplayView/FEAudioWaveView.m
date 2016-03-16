@@ -41,12 +41,10 @@
     self.lastBeginX = self.lastBeginX < 0?self.bounds.size.width:self.lastBeginX - 15.f;
     for(float x = self.lastBeginX; x < self.bounds.size.width + self.lastBeginX ; x++){
         CGFloat y = - sin(x/waveW*3.14)*waveH + self.bounds.size.height/2.f;
-        if (x == self.lastBeginX) {
-            CGContextMoveToPoint(ref, x - self.lastBeginX, y);
-        }
-        CGContextAddLineToPoint(ref,x - self.lastBeginX,y);
+        CGFloat lastY = - sin((x - 1)/waveW*3.14)*waveH + self.bounds.size.height/2.f;
+        CGContextMoveToPoint(ref, x - self.lastBeginX , lastY);
+        CGContextAddLineToPoint(ref,x - self.lastBeginX + 1,y);
         CGContextStrokePath(ref);
-        CGContextMoveToPoint(ref,x - self.lastBeginX, y);
     }
 }
 
