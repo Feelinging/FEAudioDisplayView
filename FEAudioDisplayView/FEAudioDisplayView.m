@@ -176,7 +176,7 @@
         CGSize size = self.bounds.size;
         CGFloat boarder = 8.f;
         // 播放按钮
-        CGFloat playY = MAX((size.height - 44)/2.0, 3);
+        CGFloat playY = MAX((size.height - 44)/2.0, 5);
         CGFloat playWH = size.height - 2 * playY;
         self.playButton.frame = CGRectMake(boarder, playY, playWH, playWH);
         
